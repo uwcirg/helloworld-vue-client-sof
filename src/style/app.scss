@@ -1,0 +1,14 @@
+$color-basil: #356859;
+#app {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.basil {
+    background-color: #fcfaee !important;
+}
+.basil--text {
+    color: $color-basil !important;
+}
+.chart__title {
+    color: $color-basil;
+}
