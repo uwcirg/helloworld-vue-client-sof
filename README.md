@@ -7,7 +7,7 @@ This is modeled after the [ASBI Screening App](https://github.com/asbi-cds-tools
 ## Underlying Technologies
 
 ### Vue.js
-[Vue](https://vuejs.org/) is a JavaScript front-end framework for building user interfaces. The *ASBI Intervention App* was built using the [`vue create` command](https://cli.vuejs.org/guide/creating-a-project.html#vue-create) from the Vue command line interface (CLI).
+[Vue](https://vuejs.org/) is a JavaScript front-end framework for building user interfaces. The application was built using the [`vue create` command](https://cli.vuejs.org/guide/creating-a-project.html#vue-create) from the Vue command line interface (CLI).
 
 ### Vuetify
 [Vuetify](https://vuetifyjs.com/en/) is a Vue UI library with Material Design themed UI components that can be used for the application.
