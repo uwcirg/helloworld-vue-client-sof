@@ -1,5 +1,5 @@
 # Hello World Smart on FHIR app
-This is modeled after the [ASBI Screening App](https://github.com/asbi-cds-tools/asbi-screening-app/). The app is meant to be used with the [SMART<sup>&reg;</sup> app launch framework](http://hl7.org/fhir/smart-app-launch/index.html).
+This is modeled after the [ASBI Screening App](https://github.com/asbi-cds-tools/asbi-screening-app/). The app can be used in conjuction with the [SMART<sup>&reg;</sup> app launch framework](http://hl7.org/fhir/smart-app-launch/index.html).
 
 ### Clinical Quality Language (CQL)
 [CQL](https://cql.hl7.org/) is a domain-specific programming language focused on clinical quality applications, including CDS as well as electronic clinical quality measures (eCQMs). Logical expressions written in CQL are human-readable but can also be compiled to a machine-friendly format to facilitate implementation. This application executes CQL logic to provide patient customized behavior. Machine-friendly versions of the CQL are embedded in this app; For more information about CQL see [here](https://cql.hl7.org/); For more information about how to compile CQL code into machine-readable format, see [here](https://github.com/cqframework/clinical_quality_language).
