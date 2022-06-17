@@ -84,7 +84,11 @@ export default {
 
         //get FHIR resources for the patient
         this.getFhirResources().then(() => {
-  
+        
+          //add FHIR resources for the patient to the summary object
+          this.summary['resources'] = this.patientBundle;
+          console.log('summary with resources ', this.summary);
+
           //get CQL expression lib
           getExpressionLogicLib('Summary').then(data => {
 
@@ -95,9 +99,7 @@ export default {
             setupExecution(elmJson, valueSetJson);
             // Send patient info to CQL worker to process
             sendPatientBundle(this.patientBundle);
-            this.summary['resources'] = this.patientBundle;
-            console.log('summary with resources ', this.summary);
-
+       
             setTimeout(() => {
               //named expression here is Summary, look in /src/cql/source/ExpressionLogicLibrary.cql and see how that is defined
               evaluateExpression(namedExpression).then(result => {
