@@ -35,8 +35,7 @@
     data() {
       // Indicate we are not yet ready for the component to render
       return {
-        ready: false,
-        tab: 0
+        ready: false
       };
     },
     methods: {
