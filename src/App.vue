@@ -3,6 +3,7 @@
     <Header :patient="patient"></Header>
     <v-main>
       <v-container fluid>
+        <!-- loading indicator -->
         <v-progress-circular
         :value="160"
         indeterminate
@@ -10,11 +11,13 @@
         v-if="!error && !ready"
         ></v-progress-circular>
         <div id="app">
+          <!-- body -->
           <Summary
             :title="title"
             :summary="summary"
           />
         </div>
+        <!-- error message -->
         <v-alert
           color="error"
           dark
@@ -57,14 +60,14 @@ export default {
         type: 'collection',
         entry: []
       },
-      summary: null,
+      summary: {},
       patient: null,
       error: "",
       ready: false,
     }
   },
   async mounted() {
-    //authorized client
+    //authorized FHIR client
     this.setAuthClient().then((result) => {
       this.client = result;
       if (this.error) return; // auth error, cannot continue
@@ -94,6 +97,7 @@ export default {
             sendPatientBundle(this.patientBundle);
             
             setTimeout(() => {
+              //named expression here is Summary, look in /src/cql/source/ExpressionLogicLibrary.cql and see how that is defined
               evaluateExpression(namedExpression).then(result => {
                 console.log("CQL expression result ", result)
                 this.summary = result;
@@ -126,6 +130,7 @@ export default {
       return await FHIR.oauth2.ready();
     },
     async setPatient() {
+      //this is a workaround for when patient id is not embedded within the JWT token
       let queryPatientId = sessionStorage.getItem(queryPatientIdKey);
       if (queryPatientId) {
         console.log("Using stored patient id ", queryPatientId);
@@ -155,7 +160,7 @@ export default {
             if (result.resourceType.toLowerCase() === "patient") this.patient = result;
           }
         });
-        console.log("bundle ", this.patientBundle.entry);
+        console.log("FHIR resource bundles ", this.patientBundle.entry);
       });
     }
   }

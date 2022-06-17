@@ -33,7 +33,7 @@ module.exports = {
       ]
     }
   },
-  publicPath: '/',
+  publicPath: (process.env.VUE_APP_PUBLIC_PATH?process.env.VUE_APP_PUBLIC_PATH:'/'),
   pages: {
     index: './src/main.js',
     launch: './src/launch.js'

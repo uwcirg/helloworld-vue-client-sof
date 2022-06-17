@@ -33,9 +33,8 @@
       }
     },
     data() {
-      // Indicate we are not yet ready for the component to render
       return {
-        ready: false
+        ready: false // Indicate we are not yet ready for the component to render
       };
     },
     methods: {

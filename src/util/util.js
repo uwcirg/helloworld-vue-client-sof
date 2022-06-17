@@ -1,9 +1,8 @@
-import valueSetJson from '../cql/valueset-db.json';
-
 export async function getExpressionLogicLib (expressionParam) {
-  let elmJson;
+  let elmJson, valueSetJson;
   try {
     elmJson = await import(`../cql/ExpressionLogicLibrary.json`).then(module=>module.default);
+    valueSetJson = await import(`../cql/valueset-db.json`).then(module=>module.default);
   } catch(e) {
     throw new Error('Error loading Cql ELM library ' + e);
   }
