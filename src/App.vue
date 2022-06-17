@@ -95,12 +95,17 @@ export default {
             setupExecution(elmJson, valueSetJson);
             // Send patient info to CQL worker to process
             sendPatientBundle(this.patientBundle);
-            
+            this.summary['resources'] = this.patientBundle;
+            console.log('summary with resources ', this.summary);
+
             setTimeout(() => {
               //named expression here is Summary, look in /src/cql/source/ExpressionLogicLibrary.cql and see how that is defined
               evaluateExpression(namedExpression).then(result => {
                 console.log("CQL expression result ", result)
-                this.summary = result;
+                if (result) {
+                  this.summary = {...this.summary, ...result};
+                  console.log('summary with CQL result added ', this.summary);
+                }
               }).catch( e => {
                 this.error = e;
                 console.log("CQL Expression evaluation error ", e);
