@@ -95,7 +95,7 @@ export default {
             
             setTimeout(() => {
               evaluateExpression(namedExpression).then(result => {
-                console.log("result ", result)
+                console.log("CQL expression result ", result)
                 this.summary = result;
               }).catch( e => {
                 this.error = e;
