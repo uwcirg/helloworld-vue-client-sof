@@ -114,22 +114,22 @@ export default {
               });
               this.ready = true;
             }, 50);
-          });
+          }); //end getExpressionLogicLib
             
         }).catch(e => {
           this.error = e;
           console.log("FHIR resources error ", e);
-        })
+        }); //end getFhirResources
 
       }).catch(e => {
         this.error = e;
         console.log("Patient resource error ", e);
-      });
+      }); //end setPatient
     }).catch(e => {
       console.log("Auth Error ", e);
       this.error = e;
       this.ready = true;
-    });
+    }); //end setAuthClient
   },
   methods: {
     async setAuthClient() {
