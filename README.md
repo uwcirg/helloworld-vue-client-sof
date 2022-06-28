@@ -22,7 +22,7 @@ All CQL calculations are executed within the context of a [Web Worker](https://d
 A number of options are available for local usage to support testing with synthetic data.
 
 ### Setup
-This project manages dependencies using the [Yarn package manager](https://yarnpkg.com/). The dependencies for the application can be installed locally by typing `yarn` at the command line. A local version of the app can be launched by typing `yarn serve` at the command line. A copy suitable for distribution can be built using the `yarn build` command.
+This project manages dependencies using the [Yarn package manager](https://yarnpkg.com/) in the [Node environment](https://nodejs.dev/) (Node version <= 16 is recommended for this application). Make sure to have both Yarn and Node installed before proceeding. The dependencies for the application can be installed locally by typing `yarn` at the command line. A local version of the app can be launched by typing `yarn serve` at the command line. A copy suitable for distribution can be built using the `yarn build` command.
 
 ### Download Value Sets from VSAC
 The value set content used by the CQL is cached in a file named valueset-db.json, which has been checked into this project in an empty state. In order for the CDS to operate as intended, implementers must populate valueset-db.json with the value sets which have been published on the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/). In order to access VSAC, you must sign up for a [UMLS Terminology Services account](https://uts.nlm.nih.gov//license.html).
@@ -43,7 +43,7 @@ To get you UMLS API Key:
    4. Your new API key should now be listed.
 
 ### Configuration
-Parameters for the app are stored in [environmental variables](http://man7.org/linux/man-pages/man7/environ.7.html) that are stored in an `.env` file (`cp default.env .env`). The [dotenv package](https://www.npmjs.com/package/dotenv) is used to store the default variable values, which can be overwritten by defining a more specific env (e.g., `.env.local`) file or by setting the variables in the deployment system. For more information, see the [Vue documentation](https://cli.vuejs.org/guide/mode-and-env.html#environment-variables).
+Parameters for the app are stored in [environmental variables](http://man7.org/linux/man-pages/man7/environ.7.html) that are stored in an `.env` file (`cp default.env .env` to allow environment variables to be read by the application). The [dotenv package](https://www.npmjs.com/package/dotenv) is used to store the default variable values, which can be overwritten by defining a more specific env (e.g., `.env.local`) file or by setting the variables in the deployment system. For more information, see the [Vue documentation](https://cli.vuejs.org/guide/mode-and-env.html#environment-variables).
 
 #### Parameters
 
