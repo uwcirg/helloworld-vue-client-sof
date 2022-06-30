@@ -57,5 +57,5 @@ Parameters for the app are stored in [environmental variables](http://man7.org/l
 A public [SMART<sup>&reg;</sup> App Launcher](https://launch.smarthealthit.org/index.html) is available for sandbox tesing of SMART on FHIR apps with synthetic data.
 
 #### Launch for SMART App Launcher
-Navigate to the public SMART<sup>&reg;</sup> App Launcher and choose the "Provider EHR Launch" Launch Type. Uncheck "Simulate launch within the EHR user interface".  Leave all other options unselected. Paste the URL to where `launch.html`, e.g. `http://localhost:8080/launch.html`, is being served from into the "App Launch URL" box at the bottom of the SMART<sup>&reg;</sup> App Launcher page. Select "Launch App!" which will bring up a patient selector widget before the *ASBI Intervention App* is launched.
+Navigate to the public SMART<sup>&reg;</sup> App Launcher and choose the "Provider EHR Launch" Launch Type. Uncheck "Simulate launch within the EHR user interface".  Leave all other options unselected. Paste the URL to where `launch.html`, e.g. `http://localhost:8080/launch.html`, is being served from into the "App Launch URL" box at the bottom of the SMART<sup>&reg;</sup> App Launcher page. Select "Launch App!" which will bring up a patient selector widget before the app is launched.
 
