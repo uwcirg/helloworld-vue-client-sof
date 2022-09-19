@@ -55,6 +55,7 @@ Parameters for the app are stored in [environmental variables](http://man7.org/l
 | `VUE_APP_SYSTEM_TYPE` | Define system type | `development`, `demo`, `staging`, `production`
 ### Using with Public SMART Sandbox
 A public [SMART<sup>&reg;</sup> App Launcher](https://launch.smarthealthit.org/index.html) is available for sandbox tesing of SMART on FHIR apps with synthetic data.
+| `VUE_APP_DASHBOARD_URL` | Define the (f)EMR URL to which the app can return to | example, `https://dashboard.acc.dev.cosri.cirg.washington.edu`
 
 #### Launch for SMART App Launcher
 Navigate to the public SMART<sup>&reg;</sup> App Launcher and choose the "Provider EHR Launch" Launch Type. Uncheck "Simulate launch within the EHR user interface".  Leave all other options unselected. Paste the URL to where `launch.html`, e.g. `http://localhost:8080/launch.html`, is being served from into the "App Launch URL" box at the bottom of the SMART<sup>&reg;</sup> App Launcher page. Select "Launch App!" which will bring up a patient selector widget before the app is launched.
