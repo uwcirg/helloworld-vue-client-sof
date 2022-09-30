@@ -50,7 +50,7 @@ export default {
       return this.summary;
     },
     getReturnURL() {
-      return getEnv("VUE_APP_DASHBOARD_URL");
+      return getEnv("VUE_APP_DASHBOARD_URL") + "/clear_session";
     },
   },
 };
